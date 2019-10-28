@@ -1,5 +1,6 @@
 package com.example.demo.exception;
 
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.example.demo.utils.RequestHelper;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindingResult;
@@ -111,9 +112,24 @@ public class GlobalException {
             msg = s.getMessage();
         }
         Map<String,Object> map = new HashMap<>();
-        map.put("code", -5);
+        map.put("code", -6);
         map.put("msg", msg);
         map.put("request",RequestHelper.getRequestUrl());
         return map;
     }
+
+    /**
+     * token过期异常
+     * @param e
+     * @return map
+     */
+    @ExceptionHandler(value = TokenExpiredException.class)
+    public Map getReadError(TokenExpiredException e) {
+        String msg = "token已过期";
+        Map<String,Object> map = new HashMap<>();
+        map.put("code", -7);
+        map.put("msg", msg);
+        map.put("request",RequestHelper.getRequestUrl());
+        return map;
+}
 }
