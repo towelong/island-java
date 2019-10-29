@@ -39,5 +39,12 @@ public class TokenController {
         map.put("token",token);
         return map;
     }
+    @PostMapping("/token/verify")
+    public Map verifyToken(@RequestBody User user){
+        TokenUtils tokenUtils = new TokenUtils();
+        Map map = new HashMap();
+        map.put("result",tokenUtils.VerifyToken(user.getToken()));
+        return map;
+    }
 
 }
