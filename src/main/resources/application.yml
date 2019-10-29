@@ -4,10 +4,10 @@ spring:
     url: jdbc:mysql://localhost:3306/island-java?useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: password
-logging:
-  level:
-    root: warn
-    com.example.demo.Dao: trace
-  pattern:
-    console: '%p%m%n'
+#logging:
+#  level:
+#    root: warn
+#    com.example.demo.Dao: trace
+#  pattern:
+#    console: '%p%m%n'
 

@@ -2,7 +2,6 @@ package com.example.demo.controller.v1;
 
 
 import com.example.demo.annotation.AuthToken;
-import com.example.demo.model.Favor;
 import com.example.demo.service.FavorService;
 import com.example.demo.service.FlowService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -5,6 +5,6 @@ package com.example.demo.service;
  * @create 2019/10/27 14:36
  */
 public interface BookService {
-    void updataData(int art_id);
+    void updateData(int art_id);
     void deleteData(int art_id);
 }

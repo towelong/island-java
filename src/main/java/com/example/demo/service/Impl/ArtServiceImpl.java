@@ -51,7 +51,7 @@ public class ArtServiceImpl implements ArtService {
                 sentenceService.updataData(art_id,type);
                 break;
             case 400:
-                bookService.updataData(art_id);
+                bookService.updateData(art_id);
                 break;
             default:
                 throw new NotFound("点赞失败！");

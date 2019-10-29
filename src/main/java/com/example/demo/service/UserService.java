@@ -11,4 +11,5 @@ public interface UserService {
     void createUser(User user);
     User findByNickname(String nickname);
     String verifyUser(User user) throws InvalidHashException;
+    long createMiniUser(String openid);
 }

@@ -2,6 +2,7 @@ package com.example.demo.controller.v1;
 
 
 import com.amdelamar.jhash.exception.InvalidHashException;
+import com.example.demo.exception.Forbidden;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import com.example.demo.utils.Result;
@@ -28,6 +29,9 @@ public class UserController {
 
     @PostMapping("/register")
     public Result create(@RequestBody @Validated User user) {
+        if(user.getType()!=100){
+            throw new Forbidden("登录类型不存在");
+        }
         userService.createUser(user);
         return ResultUtils.success("注册成功！");
     }

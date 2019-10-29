@@ -5,6 +5,7 @@ import com.amdelamar.jhash.Hash;
 import com.amdelamar.jhash.algorithms.Type;
 import com.amdelamar.jhash.exception.InvalidHashException;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -27,6 +28,11 @@ public class User {
     private String email;
     private String password;
     private String openid;
+    @TableField(exist = false)
+    private int type;
+    @TableField(exist = false)
+    private String account;
+
     @JSONField(name = "created_at")
     @JsonProperty("created_at")
     private LocalDateTime createdAt;

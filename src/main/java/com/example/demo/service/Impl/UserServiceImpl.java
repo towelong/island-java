@@ -37,6 +37,21 @@ public class UserServiceImpl implements UserService {
         user.setCreatedAt(LocalDateTime.now());
         userMapper.insert(user);
     }
+    @Override
+    public long createMiniUser(String openid){
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.eq("openid",openid);
+        User exit = userMapper.selectOne(wrapper);
+        User user = new User();
+        if(exit != null){
+            throw new Forbidden("小程序用户已存在");
+        }
+        user.setOpenid(openid);
+        user.setCreatedAt(LocalDateTime.now());
+        userMapper.insert(user);
+        long uid = user.getId();
+        return uid;
+    }
 
     @Override
     public User findByNickname(String nickname) {

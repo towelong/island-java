@@ -18,7 +18,7 @@ public class BookServiceImpl implements BookService {
     @Autowired
     BookMapper bookMapper;
 
-    public void updataData(int art_id){
+    public void updateData(int art_id){
         QueryWrapper<Book> bookQueryWrapper = new QueryWrapper<>();
         bookQueryWrapper.eq("id",art_id);
         Book book = bookMapper.selectOne(bookQueryWrapper);
