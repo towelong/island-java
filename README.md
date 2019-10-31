@@ -1,3 +1,7 @@
+---
+typora-root-url: img
+---
+
 # island-java
 
 
@@ -8,9 +12,7 @@
 
 
 
-![Snipaste_2019-10-31_21-49-42](C:\Users\MI\Desktop\Snipaste_2019-10-31_21-49-42.png)
-
-
+![example](/example.png)
 
 - [x] 微信登录
 - [x] 完成所有接口测试以及编写
