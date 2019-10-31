@@ -1,7 +1,3 @@
----
-typora-root-url: img
----
-
 # island-java
 
 
@@ -12,7 +8,7 @@ typora-root-url: img
 
 
 
-![example](/example.png)
+![example](https://raw.githubusercontent.com/ToWeLong/island-java/master/img/example.png)
 
 - [x] 微信登录
 - [x] 完成所有接口测试以及编写
