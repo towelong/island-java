@@ -33,7 +33,6 @@ public class User {
     @TableField(exist = false)
     private String account;
     @TableField(exist = false)
-    @NotEmpty(message = "token不能为空")
     private String token;
 
     @JSONField(name = "created_at")
